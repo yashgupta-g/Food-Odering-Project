@@ -3,7 +3,7 @@ import "./Header.css"
 export default function Header() {
   return (
     <div className='nav'>
-<img src='https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png ' alt='eatupp'        />
+<img src="https://i.ibb.co/st53b55/eatupp.png"  alt='eatupp'        />
 <ul>
 
 <li>Home</li>

@@ -2,7 +2,12 @@
 
 width: 200px;
 
-    border: 1px solid black;
-    padding: 5px;
-    margin: 5px;
+    border: ;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 2px lightgray;
+
+    
 }
+

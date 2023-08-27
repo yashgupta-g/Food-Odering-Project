@@ -9,21 +9,7 @@ const heading = (
 <>
 <Header/>
 <Body/>
-<Body/>
-<Body/>
-<Body/>
-<Body/>
-<Body/>
-<Body/>
-<Body/>
-
-<Body/>
-<Body/>
-<Body/>
-
-
-
-<Footer/>
+{/* <Footer/> */}
 </>
 
 
