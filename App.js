@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDom from "react-dom/client"
+import Header from "./src/Header";
 
 
 const heading = (
-<h1>
-hii 
+<>
 
-</h1>
+<Header/>
+</>
 
 
 ) ;

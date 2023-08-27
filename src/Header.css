@@ -1,0 +1,24 @@
+.nav>ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+
+
+}
+.nav>ul> li {
+padding-right: 70px;
+cursor:pointer;
+}
+
+
+.nav {
+    display: flex;
+   justify-content: center;
+}
+
+.nav>img {
+    width: 190px;
+    height: 40px;
+    
+}
