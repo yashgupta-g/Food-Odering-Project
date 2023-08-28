@@ -1,13 +1,13 @@
 .card {
-
-width: 200px;
-
-    border: ;
-    padding: 20px;
+    width: 200px;
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 1px 1px 5px 2px lightgray;
-
-    
 }
-
+.card > img {
+border-radius: 10px;
+    width: 100%;
+}
+.svg > svg{
+    width: 30px;
+    height: 50px;
+}
