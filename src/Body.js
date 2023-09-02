@@ -209,22 +209,21 @@ const  Card = ({name , cuisines ,areaName, cloudinaryImageId, avgRating   }) => 
 const Body = () => {
 return(
 <div className='card-list '>
-<Card {...restaurants[0].info}/>
-<Card {...restaurants[1].info}/>
-<Card {...restaurants[2].info}/>
-<Card {...restaurants[3].info}/>
-<Card {...restaurants[4].info}/>
-<Card {...restaurants[5].info}/>
-<Card {...restaurants[6].info}/>
-<Card {...restaurants[7].info}/>
-<Card {...restaurants[8].info}/>
+
+{
+restaurants.map(restaurants =>{
+return(
+
+  <Card {...restaurants.info}/>
+)
 
 
+})
+
+}
 
 </div>
 );
-
-
 
 }
 export {Body} 
