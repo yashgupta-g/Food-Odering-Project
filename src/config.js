@@ -1,18 +1,18 @@
 export const img_url = " https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
-export const restaurants = [
+export const restaurantsData = [
     {
       info: {
         "id": "738170",
-        name: "SashMicks Bakery (Cake)",
-        cloudinaryImageId: "31e52bcbebacbc8f5b7352b52beb709d",
-        locality: "Shahdra",
-        areaName: "Noida Expressway",
+        "name": "SashMicks Bakery (Cake)",
+        "cloudinaryImageId": "31e52bcbebacbc8f5b7352b52beb709d",
+        "locality": "Shahdra",
+        "areaName": "Noida Expressway",
         "costForTwo": "₹500 for two",
-        cuisines: [
+        "cuisines": [
           "Bakery",
           "Desserts"
         ],
-        avgRating: 4.6,
+        "avgRating": 4.6,
      
       
       },
