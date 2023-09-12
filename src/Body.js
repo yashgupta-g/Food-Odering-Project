@@ -1,15 +1,15 @@
 import { restaurantsData, restaurantsData } from './config';
 import  Card from './cards';
 import { useEffect, useState } from 'react';
-
+import Shimer from './Shimer';
 function filterData(searchInput, Restaurant) {
   const filterData = Restaurant.filter((restaurant) =>
   restaurant.info.name.includes(searchInput));
   return filterData;  
-}
+}   
 
 const Body = () => {
-  const [Restaurant, setRestaurant] = useState(restaurantsData);
+  const [Restaurant, setRestaurant] = useState([]);
   const [searchInput, setSearchInput] = useState("");
 
 useEffect(()=>{
@@ -19,12 +19,13 @@ useEffect(()=>{
 
 async function getrestaurant (){
 
-  const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.53451699124938&lng=77.3930435211792&restaurantId=353956&catalog_qa=undefined&submitAction=ENTER")
+  const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.88454&lng=81.052101&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
   const json = await data.json();
   console.log(json);
+  setRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 }
 
-  return (
+  return  (Restaurant.length == 0) ? <Shimer/> :  (
     <>
       <div className="search-container">
         <input
@@ -41,13 +42,13 @@ async function getrestaurant (){
             setRestaurant(data);
           }}
         >
-          search - {searchInput}
+          search
         </button>
       </div>
 
       <div className="card-list ">
         {Restaurant.map((restaurantsData) => {
-          return <Card {...restaurantsData.info} />;
+          return <Card key={restaurantsData.info.id} {...restaurantsData.info} />;
         })}
       </div>
     </>
