@@ -1,38 +1,37 @@
 import React from 'react'
+import "./Card.css"
 import "./Body.css"
 import { img_url } from './config';
  const  Card = ({name , cuisines ,areaName, cloudinaryImageId, avgRating   }) =>  { 
   return (
     <>
-      <div className="card_box">
-        <div>
-          <img src={img_url + cloudinaryImageId} alt="" />
-        </div>
+     
+<div className=" max-w-xs m-9  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img src={img_url + cloudinaryImageId} className="rounded-t-lg"  alt="" />
+    </a>
+    <div className="p-5">
+        <a href="#">
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h5>
+        </a>
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"> {cuisines}.</p>
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"> {areaName}.</p>
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"> {avgRating}.</p>
+        <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-orange-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Add to Cart
+             <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </a>
+    </div>
+</div>
 
-        <div className="m-2">
-          <h2 className=" text-lg font-bold">{name} </h2>
-          <h5>{cuisines}</h5>
-          <h5>{areaName}</h5>
-          <div>
-            <div className="svg">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 64 64"
-                id="Star"
-              >
-                <path
-                  d="M32.194 7.106c-13.689 0-24.826 11.137-24.826 24.826 0 13.69 11.137 24.828 24.826 24.828S57.02 45.622 57.02 31.932c.001-13.689-11.136-24.826-24.826-24.826zm13.717 23.011v.001l-7.187 5.2 2.768 8.46a1.338 1.338 0 0 1-2.054 1.503l-7.243-5.239-7.243 5.239a1.338 1.338 0 0 1-2.054-1.503l2.769-8.46-7.187-5.2v-.001a1.336 1.336 0 0 1 .784-2.42h8.897l2.755-8.421a1.339 1.339 0 0 1 2.559 0l2.755 8.421h8.897a1.337 1.337 0 0 1 .784 2.42z"
-                  fill="#34a853"
-                  className="color000000 svgShape"
-                ></path>
-              </svg>
-            </div>
-            <h5> {avgRating} </h5>
-          </div>
-        </div>
-      </div>
     </>
   );
 };
 
 export default Card
+
+
+
+
